@@ -3,11 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width,initial-scale=1" name="viewport">
-	<title>APPLE BERRY</title>
+	<title>Dentalusty</title>
 	<meta content="Dentalusty" name="descriprion">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link href="./css/style.css" rel="stylesheet">
 	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="original-site.js"></script>
 	
 	<link href="images/favicon.png" rel="icon" type="image/png"><!--favicon-->
@@ -21,82 +22,80 @@
 			<div class="container fbox header_container">
 				<div class="logo_container">
 					<div class="logo logo_pc">
-						<h1><a href="index.html"><img class="logo_img" alt="Dntalusty" class="logo_img" src="images/01-1_top/logo_set.png" srcset="images/01-1_top/logo_Set@2x.png 2x"></a></h1>
+						<h1><a href="index.html"><img class="logo_img" alt="Dntalusty" src="images/01-1_top/logo_set.png" srcset="images/01-1_top/logo_set@2x.png 2x"></a></h1>
 					</div>
 					<div class="logo logo_sp">
-						<h1><a href="index.html"><img class="logo_img" alt="Apple Berry" class="sp_logo_img" src="images/02-1_top_sp/logo_sp.png"></a></h1>
+						<h1><a href="index.html"><img class="logo_img sp_logo_img" alt="Dntalusty" src="images/02-1_top_sp/logo_sp.png"></a></h1>
 					</div>
 				</div><!--logo_container-->
 				<div class="menu_container">
 					<div id="PC_menu">
 						<ul class="PC_menu_li clearfix">
-							<li class="PC_menu_item text_menu" id="text_menu_1">
+							<li class="PC_menu_item text_menu text_menu_1">
 								<a href="index.html"><p class="pc_menu_text">HOME</p></a>
 							</li>
-							<li class="PC_menu_item text_menu" id="text_menu_2">
+							<li class="PC_menu_item text_menu text_menu_2">
 								<a href="plan.html"><p class="pc_menu_text">プラン</p></a>
 							</li>
-							<li class="PC_menu_item text_menu" id="text_menu_3">
+							<li class="PC_menu_item text_menu text_menu_3">
 								<a href="service.html"><p class="pc_menu_text">サービス</p></a>
 							</li>
-							<li class="PC_menu_item text_menu" id="text_menu_4">
+							<li class="PC_menu_item text_menu text_menu_4">
 								<a href="work.html"><p class="pc_menu_text">制作実績</p></a>
 							</li>
-							<li class="PC_menu_item text_menu" id="text_menu_5">
+							<li class="PC_menu_item text_menu text_menu_5">
 								<a href="Q&A.html"><p class="pc_menu_text">よくあるご質問</p></a>
 							</li>
-							<li class="PC_menu_item text_menu" id="text_menu_6">
+							<li class="PC_menu_item text_menu text_menu_6">
 								<a href="contact.html"><p class="pc_menu_text">ご依頼・お問い合わせ</p></a>
 							</li>
 						</ul>
 					</div><!--#menu-->
-					<div id="SP_menu">
-						<ul class="SP_menu_li">
-							<div id="hamburger_menu_container"><li class="SP_menu_item SP_img_menu" id="SP_img_menu_3 hamburger_menu">
-								<a href="index.html"><img alt="Menu" src="images/02-1_top_sp/menu.png"></a>
-							</li>
+					<ul class="SP_menu_li">
+						<li class="SP_menu_item SP_img_menu" id="hamburger_menu"><div id="hamburger_menu_container">
+							<a href="index.html"><img alt="Menu" src="images/02-1_top_sp/menu.png"></a>
 							</div>
-							
-							<div class="SP_sub_menu_li_container">
-								<ul class="SP_sub_menu_li">
-									<a class="SP_sub_menu_item_a" href="index.html">
-										<li class="SP_sub_menu_item text_menu" id="text_menu_1">
-											<p class="sp_menu_text">HOME</p>
-										</li>
-									</a>
-									<a class="SP_sub_menu_item_a" href="index.html">
-										<li class="SP_sub_menu_item text_menu" id="text_menu_2">
-											<p class="sp_menu_text">プラン</p>
-										</li>
-									</a>
-									<a class="SP_sub_menu_item_a" href="index.html">
-										<li class="SP_sub_menu_item text_menu" id="text_menu_3">
-											<p class="sp_menu_text">サービス</p>
-										</li>
-									</a>
-									<a class="SP_sub_menu_item_a" href="index.html">
-										<li class="SP_sub_menu_item text_menu" id="text_menu_4">
-											<p class="sp_menu_text">制作実績</p>
-										</li>
-									</a>
-									<a class="SP_sub_menu_item_a" href="index.html">
-										<li class="SP_sub_menu_item text_menu" id="text_menu_5">
-											<p class="sp_menu_text">よくあるご質問</p>
-										</li>
-									</a>
-									<a class="SP_sub_menu_item_a" href="index.html">
-										<li class="SP_sub_menu_item text_menu" id="text_menu_6">
-											<p class="sp_menu_text">ご依頼・お問い合わせ</p>
-										</li>
-									</a>
-								</ul>
-							</div>
-							
-						</ul>
-					</div><!--sp_menu-->
+						</li>
+					</ul>
 				</div><!--.menu_container-->
 			</div><!--.row-->
 		</div><!--.header_bg-->
+		<div id="SP_menu">
+			<div class="SP_sub_menu_li_container">
+				<ul class="SP_sub_menu_li">
+					<li class="SP_sub_menu_item text_menu text_menu_1">
+						<a class="SP_sub_menu_item_a" href="index.html">
+							<p class="sp_menu_text">HOME</p>
+						</a>
+					</li>
+					<li class="SP_sub_menu_item text_menu text_menu_2">
+						<a class="SP_sub_menu_item_a" href="index.html">
+							<p class="sp_menu_text">プラン</p>
+						</a>
+					</li>
+					<li class="SP_sub_menu_item text_menu text_menu_3">
+						<a class="SP_sub_menu_item_a" href="index.html">
+							<p class="sp_menu_text">サービス</p>
+						</a>
+					</li>
+					<li class="SP_sub_menu_item text_menu text_menu_4">
+						<a class="SP_sub_menu_item_a" href="index.html">
+							<p class="sp_menu_text">制作実績</p>
+						</a>
+					</li>
+					<li class="SP_sub_menu_item text_menu text_menu_5">
+						<a class="SP_sub_menu_item_a" href="index.html">
+							<p class="sp_menu_text">よくあるご質問</p>
+						</a>
+					</li>
+					<li class="SP_sub_menu_item text_menu text_menu_6">
+						<a class="SP_sub_menu_item_a" href="index.html">
+							<p class="sp_menu_text">ご依頼・お問い合わせ</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div><!--sp_menu-->
 		<div id="cover_area">
 			<div class="container clearfix">
 				<h2 class="left cover_text_left">歯医者のホームページは、</h2>
@@ -106,8 +105,8 @@
     </header>
 	<div id ="main_container">
 		<div id="main" class="container">
-			<img class="subtitle" alt="3_strength" width="100%" src="images/01-1_top/subtitle.png" srcset="images/01-1_top/subtitle@2x.png 2x">
-			<div class="sp_subtitle"><img class="sp_contents_title_img" alt="3_strength" src="images/02-1_top_sp/subtitle_sp.png"></div>
+			<img class="subtitle" alt="3つの強み" src="images/01-1_top/subtitle.png" srcset="images/01-1_top/subtitle@2x.png 2x">
+			<div class="sp_subtitle"><img class="sp_contents_title_img" alt="3つの強み" src="images/02-1_top_sp/subtitle_sp.png"></div>
 				<div class="contents_container fbox">
 					<div class="item_container">
 						<div class="item_icon_container"><img class="item_img" alt="Item_01" src="images/01-1_top/top_wallet_clear.png" srcset="images/01-1_top/top_wallet_clear@2x.png 2x"></div>
@@ -122,7 +121,7 @@
 						私たちは、オプション利用料なしでスマートフォンに最適したサイトを提供致します。</p>
 					</div>
 					<div class="item_container">
-						<div class="item_icon_container"><img class="item_img" alt="Item_03" src="images/01-1_top/top_SEO_clear.png" srcset="images/01-1_top/top_wallet_SEO@2x.png 2x"></div>
+						<div class="item_icon_container"><img class="item_img" alt="Item_03" src="images/01-1_top/top_SEO_clear.png" srcset="images/01-1_top/top_SEO@2x.png 2x"></div>
 						<h4 class="item_subtitle">検索上位表示</h4>
 						<p class="item_text">検索で上位表示されるのは、新規のお客様に気づいて頂く為にはとても重要になります。</p>
 					</div>

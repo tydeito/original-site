@@ -101,16 +101,24 @@ h4 {
         .header_bg .header_container .menu_container #PC_menu .PC_menu_li .PC_menu_item .pc_menu_text {
           margin: 0; }
     @media (min-width: 768px) {
-      .header_bg .header_container #SP_menu {
+      .header_bg .header_container .menu_container .SP_menu_li {
         display: none; } }
-    .header_bg .header_container #SP_menu .SP_sub_menu_item {
-      text-align: center;
-      font-weight: bold;
+
+/* #SP_menu
+----------------------------------------------------------------*/
+@media (min-width: 768px) {
+  #SP_menu {
+    display: none; } }
+#SP_menu .SP_sub_menu_li {
+  display: none; }
+  #SP_menu .SP_sub_menu_li .SP_sub_menu_item {
+    text-align: center;
+    font-weight: bold;
+    color: white; }
+    #SP_menu .SP_sub_menu_li .SP_sub_menu_item :link {
       color: white; }
-      .header_bg .header_container #SP_menu .SP_sub_menu_item :link {
-        color: white; }
-      .header_bg .header_container #SP_menu .SP_sub_menu_item :visited {
-        color: white; }
+    #SP_menu .SP_sub_menu_li .SP_sub_menu_item :visited {
+      color: white; }
 
 /* cover_area
 ----------------------------------------------------------------*/
@@ -196,5 +204,8 @@ footer {
       padding-bottom: 10px; }
       footer .fotter_container .address .tel {
         padding-bottom: 10px; }
+
+.subtitle {
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

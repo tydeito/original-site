@@ -194,32 +194,47 @@ h4{
                         }
                     }
                 }
+            } // #PC_menu
+            
+            .SP_menu_li{
+                @media (min-width: 768px) {
+                    display: none;
+                }
             }
-        }
-            
-            
-        #SP_menu{
+        } // .menu_container
+    } // .header_container
+    
+}  //.header_bg
+
+
+
+/* #SP_menu
+----------------------------------------------------------------*/
+
+#SP_menu{
             @media (min-width: 768px) {
                 display: none;
             }
             
-            .SP_sub_menu_item{
-                text-align: center;
-                font-weight: bold;
-                color: white;
-                
-                
-                :link{
+            .SP_sub_menu_li{
+                display: none;
+            
+            
+                .SP_sub_menu_item{
+                    text-align: center;
+                    font-weight: bold;
                     color: white;
+                    
+                    
+                    :link{
+                        color: white;
+                    }
+                    :visited{
+                        color: white;
+                    }
                 }
-                :visited{
-                    color: white;
-                }
-            }
+            } // .SP_sub_menu_li
         }
-    } // .header_container
-    
-}  //.header_bg
 
 
 
@@ -351,4 +366,9 @@ footer {
             }
         }
     }
+}
+
+
+.subtitle{
+    width:100%;
 }
