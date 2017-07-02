@@ -12,23 +12,11 @@ $fotterColor: #101215;
 
 // 
 
-@mixin back_next_navi {
-        box-sizing: border-box;
-        background: $subColor;
-        color: $baseColor;
-        text-transform: uppercase;
-        width: 120px;
-        height: 40px;
-        font-weight: bold;
-        padding-top: 10px;
-        margin-top: 0;
-    }
-    
 @mixin icon($background-color:$keyColor) {
         display: inline-block;
         background-color: $background-color;
         border-radius: 100%;
-    }
+    } // アイコン様のmixin
     
 @mixin font_white {
         color: white;
@@ -36,7 +24,7 @@ $fotterColor: #101215;
         :visited { color:white;}
         :hover { color:white;}
         :active { color:white;}
-    }
+    } // リンクのフォントを全て白に
     
 @mixin font_subColor {
         color: $subColor;
@@ -44,7 +32,41 @@ $fotterColor: #101215;
         :visited { color:$subColor;}
         :hover { color:$subColor;}
         :active { color:$subColor;}
+    } // リンクのフォントを全てサブカラーに
+    
+@mixin sub_title {
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-align: center;
+    } // サブタイトル(小見出しの方)用のmixin
+    
+@mixin subtitle_shadow {
+        text-shadow: 3px 3px 4px rgba(255,255,255,0.7),
+            -3px 3px 4px rgba(255,255,255,0.7),
+            3px -3px 4px rgba(255,255,255,0.7),
+            -3px -3px 4px rgba(255,255,255,0.7),
+            0px 3px 4px rgba(255,255,255,0.7),
+            -3px 0px 4px rgba(255,255,255,0.7),
+            0px -3px 4px rgba(255,255,255,0.7),
+            3px 0px 4px rgba(255,255,255,0.7);
+    } // サブタイトル用のドロップシャドウ
+    
+@mixin sp_menu {
+    padding:0;
+    text-align: center;
+    font-weight: bold;
+    
+    @media (min-width: 768px) {
+        display: none;
     }
+    
+    div{
+            height: 54px;
+            line-height: 54px;
+            font-size: 20px;
+    }
+}
+    
 
 /* Bass
 ----------------------------------------------------------------*/
@@ -89,6 +111,10 @@ a:active { text-decoration:none }
     float: right;
 }
 
+.orange{
+         color: $keyColor;
+     }
+
 
 
 html{ font-size: 62.5%; }
@@ -109,14 +135,7 @@ h1 {
 h2 {
     font-size: 1.8rem;
     color: $keyColor;
-    text-shadow: 3px 3px 4px rgba(255,255,255,0.7),
-             -3px 3px 4px rgba(255,255,255,0.7),
-             3px -3px 4px rgba(255,255,255,0.7),
-             -3px -3px 4px rgba(255,255,255,0.7),
-             0px 3px 4px rgba(255,255,255,0.7),
-             -3px 0px 4px rgba(255,255,255,0.7),
-             0px -3px 4px rgba(255,255,255,0.7),
-             3px 0px 4px rgba(255,255,255,0.7);
+    @include subtitle_shadow;
      
            
     @media (min-width: 440px) {
@@ -129,16 +148,18 @@ h2 {
 }
 
 h3{
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: $keyColor;
-    text-shadow: 3px 3px 4px rgba(255,255,255,0.7),
-             -3px 3px 4px rgba(255,255,255,0.7),
-             3px -3px 4px rgba(255,255,255,0.7),
-             -3px -3px 4px rgba(255,255,255,0.7),
-             0px 3px 4px rgba(255,255,255,0.7),
-             -3px 0px 4px rgba(255,255,255,0.7),
-             0px -3px 4px rgba(255,255,255,0.7),
-             3px 0px 4px rgba(255,255,255,0.7);
+    @include subtitle_shadow;
+                  
+           
+    @media (min-width: 440px) {
+        font-size: 3.0rem;
+    }
+             
+    @media (min-width: 768px) {
+        font-size: 5.0rem;
+    }
 }
 
 h4{
@@ -146,54 +167,37 @@ h4{
     color: $fontColor;
 }
 
+.baseColor_container {
+    background: $baseColor;
+}
+
+.subColor_container {
+    background: $subColor;
+}
 
 .sp_menu_subColor{
-        
-    padding:0;
-    text-align: center;
+    
+    @include sp_menu;
     background: $subColor;
     @include font_white;
-    font-weight: bold;
-    
-    @media (min-width: 768px) {
-        display: none;
-    }
     
     li{
         border: solid 1px white;
         border-left: none;
         border-right: none;
-    
-        div{
-            height: 54px;
-            line-height: 54px;
-            font-size: 20px;
         }
     }
-}
 
 .sp_menu_white{
         
-    padding:0;
-    text-align: center;
+    @include sp_menu;
     background: $baseColor;
     @include font_subColor;
-    font-weight: bold;
-    
-    @media (min-width: 768px) {
-        display: none;
-    }
     
     li{
         border: solid 1px $subColor;
         border-left: none;
         border-right: none;
-    
-        div{
-            height: 54px;
-            line-height: 54px;
-            font-size: 20px;
-        }
     }
 }
 
@@ -511,6 +515,161 @@ footer {
         } // .address
     } // .fotter_container
 }
+
+
+
+
+/* plan.html
+----------------------------------------------------------------*/
+
+
+/* sub_page_cover_area
+----------------------------------------------------------------*/
+
+#sub_page_cover_area {
+    height: 72px;
+    text-align: center;
+    padding: 0;
+
+    background-image: url("../images/02-2_plan_sp/cover_plan_sp.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+    //PC表示
+    @media (min-width:768px) {
+        
+        text-align: left;
+        height: 165px;
+        padding: 0;
+        background-image: url("../images/01-2_plan/cover_plan.jpg");
+        
+         //retina_bg
+        @media screen and (-webkit-min-device-pixel-ratio:2),
+                          (min-resolution: 2dppx){
+            background-image: url("../images/01-2_plan/cover_plan@2x.jpg");
+        }
+    }
+    
+    .sub_page_cover_text{
+        padding-top: 0;
+        line-height: 72px;
+        
+        @media (min-width:768px) {
+            padding-top: 0;
+            line-height: 165px;
+        }
+        
+    }
+}  // .sub_page_cover_area
+
+
+
+/* plan_first_container
+----------------------------------------------------------------*/
+
+
+.plan_first_container{
+    padding: 48px 0 48px 0;
+    margin: auto;
+}
+
+.plan_first_text{
+     font-size: 2.5rem;
+     font-weight: bold;
+     width: 354px;
+     margin: auto;
+     
+     .mid_text{
+         font-size: 2.0rem;
+     }
+     
+     .little_text{
+         font-size: 1.6rem;
+     }
+}
+
+
+/* plan_second_container
+----------------------------------------------------------------*/
+
+.plan_second_container{
+    padding: 46px 0 70px 0;
+    color: white;
+    
+    .plan_second_sub_title{
+        @include sub_title;
+        padding-bottom: 68px;
+    }
+
+
+    .plan_second_fbox{
+        justify-content: space-between;
+        
+        .plan_second_text{
+            width: 47.3%;
+            line-height: 2rem;
+        }
+        
+        
+        .plan_content_img{
+            
+            width: 47.3%;
+            
+            .plan_content_img_pc{
+                max-width: 100%;
+                
+                @media (max-width: 767px) {
+                    display: none;
+                }      
+            }
+            
+            .plan_content_img_sp{
+                max-width: 100%;
+                
+                @media (min-width: 768px) {
+                    display: none;
+                }                  
+            }
+        } // .plan_content_img
+    } // .plan_second_fbox
+} // .plan_second_container
+
+
+
+/* plan_third_container
+----------------------------------------------------------------*/
+
+.plan_third_container{
+    padding-bottom: 10px;
+    
+    .plan_third_sub_title{
+        @include sub_title;
+        color: $subColor;
+        padding: 46px 0 70px 0;
+    }
+    
+    .plan_icon_set{
+        width: 100%;
+        
+        .plan_icon_box{
+            align-items: center;
+            box-sizing: border-box;
+            width: 50%;
+            padding-left: 10%;
+            padding-bottom: 62px;
+            
+            .plan_icon{
+                @include icon;
+            }
+            
+            .plan_icon_text{
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
 
 
 

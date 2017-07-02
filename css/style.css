@@ -37,6 +37,9 @@ a:active {
 .right {
   float: right; }
 
+.orange {
+  color: #ff921b; }
+
 html {
   font-size: 62.5%; }
 
@@ -63,20 +66,39 @@ h2 {
       font-size: 5.0rem; } }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #ff921b;
   text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.7), -3px 3px 4px rgba(255, 255, 255, 0.7), 3px -3px 4px rgba(255, 255, 255, 0.7), -3px -3px 4px rgba(255, 255, 255, 0.7), 0px 3px 4px rgba(255, 255, 255, 0.7), -3px 0px 4px rgba(255, 255, 255, 0.7), 0px -3px 4px rgba(255, 255, 255, 0.7), 3px 0px 4px rgba(255, 255, 255, 0.7); }
+  @media (min-width: 440px) {
+    h3 {
+      font-size: 3.0rem; } }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 5.0rem; } }
 
 h4 {
   font-size: 2.2rem;
   color: #888888; }
 
+.baseColor_container {
+  background: #f4f6fe; }
+
+.subColor_container {
+  background: #239ac9; }
+
 .sp_menu_subColor {
   padding: 0;
   text-align: center;
+  font-weight: bold;
   background: #239ac9;
-  color: white;
-  font-weight: bold; }
+  color: white; }
+  @media (min-width: 768px) {
+    .sp_menu_subColor {
+      display: none; } }
+  .sp_menu_subColor div {
+    height: 54px;
+    line-height: 54px;
+    font-size: 20px; }
   .sp_menu_subColor :link {
     color: white; }
   .sp_menu_subColor :visited {
@@ -85,24 +107,24 @@ h4 {
     color: white; }
   .sp_menu_subColor :active {
     color: white; }
-  @media (min-width: 768px) {
-    .sp_menu_subColor {
-      display: none; } }
   .sp_menu_subColor li {
     border: solid 1px white;
     border-left: none;
     border-right: none; }
-    .sp_menu_subColor li div {
-      height: 54px;
-      line-height: 54px;
-      font-size: 20px; }
 
 .sp_menu_white {
   padding: 0;
   text-align: center;
+  font-weight: bold;
   background: #f4f6fe;
-  color: #239ac9;
-  font-weight: bold; }
+  color: #239ac9; }
+  @media (min-width: 768px) {
+    .sp_menu_white {
+      display: none; } }
+  .sp_menu_white div {
+    height: 54px;
+    line-height: 54px;
+    font-size: 20px; }
   .sp_menu_white :link {
     color: #239ac9; }
   .sp_menu_white :visited {
@@ -111,17 +133,10 @@ h4 {
     color: #239ac9; }
   .sp_menu_white :active {
     color: #239ac9; }
-  @media (min-width: 768px) {
-    .sp_menu_white {
-      display: none; } }
   .sp_menu_white li {
     border: solid 1px #239ac9;
     border-left: none;
     border-right: none; }
-    .sp_menu_white li div {
-      height: 54px;
-      line-height: 54px;
-      font-size: 20px; }
 
 /* header
 ----------------------------------------------------------------*/
@@ -314,5 +329,103 @@ footer {
           width: auto; } }
       footer .fotter_container .address .tel {
         padding-bottom: 10px; }
+
+/* plan.html
+----------------------------------------------------------------*/
+/* sub_page_cover_area
+----------------------------------------------------------------*/
+#sub_page_cover_area {
+  height: 72px;
+  text-align: center;
+  padding: 0;
+  background-image: url("../images/02-2_plan_sp/cover_plan_sp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (min-width: 768px) {
+    #sub_page_cover_area {
+      text-align: left;
+      height: 165px;
+      padding: 0;
+      background-image: url("../images/01-2_plan/cover_plan.jpg"); } }
+  @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+    #sub_page_cover_area {
+      background-image: url("../images/01-2_plan/cover_plan@2x.jpg"); } }
+
+  #sub_page_cover_area .sub_page_cover_text {
+    padding-top: 0;
+    line-height: 72px; }
+    @media (min-width: 768px) {
+      #sub_page_cover_area .sub_page_cover_text {
+        padding-top: 0;
+        line-height: 165px; } }
+
+/* plan_first_container
+----------------------------------------------------------------*/
+.plan_first_container {
+  padding: 48px 0 48px 0;
+  margin: auto; }
+
+.plan_first_text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 354px;
+  margin: auto; }
+  .plan_first_text .mid_text {
+    font-size: 2.0rem; }
+  .plan_first_text .little_text {
+    font-size: 1.6rem; }
+
+/* plan_second_container
+----------------------------------------------------------------*/
+.plan_second_container {
+  padding: 46px 0 70px 0;
+  color: white; }
+  .plan_second_container .plan_second_sub_title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 68px; }
+  .plan_second_container .plan_second_fbox {
+    justify-content: space-between; }
+    .plan_second_container .plan_second_fbox .plan_second_text {
+      width: 47.3%;
+      line-height: 2rem; }
+    .plan_second_container .plan_second_fbox .plan_content_img {
+      width: 47.3%; }
+      .plan_second_container .plan_second_fbox .plan_content_img .plan_content_img_pc {
+        max-width: 100%; }
+        @media (max-width: 767px) {
+          .plan_second_container .plan_second_fbox .plan_content_img .plan_content_img_pc {
+            display: none; } }
+      .plan_second_container .plan_second_fbox .plan_content_img .plan_content_img_sp {
+        max-width: 100%; }
+        @media (min-width: 768px) {
+          .plan_second_container .plan_second_fbox .plan_content_img .plan_content_img_sp {
+            display: none; } }
+
+/* plan_third_container
+----------------------------------------------------------------*/
+.plan_third_container {
+  padding-bottom: 10px; }
+  .plan_third_container .plan_third_sub_title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #239ac9;
+    padding: 46px 0 70px 0; }
+  .plan_third_container .plan_icon_set {
+    width: 100%; }
+    .plan_third_container .plan_icon_set .plan_icon_box {
+      align-items: center;
+      box-sizing: border-box;
+      width: 50%;
+      padding-left: 10%;
+      padding-bottom: 62px; }
+      .plan_third_container .plan_icon_set .plan_icon_box .plan_icon {
+        display: inline-block;
+        background-color: #ff921b;
+        border-radius: 100%; }
+      .plan_third_container .plan_icon_set .plan_icon_box .plan_icon_text {
+        padding-left: 20px; }
 
 /*# sourceMappingURL=style.css.map */
