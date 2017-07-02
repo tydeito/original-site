@@ -478,6 +478,10 @@ footer {
                 display: none;
             }
             
+        .footer_text_container_1{
+            padding-left: 0;
+        }
+            
         .footer_text_container_2{
             padding-left: 96px;
             }
@@ -528,6 +532,7 @@ footer {
 
 #sub_page_cover_area {
     height: 72px;
+    line-height: 72px;
     text-align: center;
     padding: 0;
 
@@ -541,6 +546,7 @@ footer {
         
         text-align: left;
         height: 165px;
+        line-height: 165px;
         padding: 0;
         background-image: url("../images/01-2_plan/cover_plan.jpg");
         

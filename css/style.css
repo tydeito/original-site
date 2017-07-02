@@ -305,6 +305,8 @@ footer {
     @media (max-width: 767px) {
       footer .fotter_container .footer_text_container {
         display: none; } }
+    footer .fotter_container .footer_text_container .footer_text_container_1 {
+      padding-left: 0; }
     footer .fotter_container .footer_text_container .footer_text_container_2 {
       padding-left: 96px; }
     footer .fotter_container .footer_text {
@@ -336,6 +338,7 @@ footer {
 ----------------------------------------------------------------*/
 #sub_page_cover_area {
   height: 72px;
+  line-height: 72px;
   text-align: center;
   padding: 0;
   background-image: url("../images/02-2_plan_sp/cover_plan_sp.jpg");
@@ -345,6 +348,7 @@ footer {
     #sub_page_cover_area {
       text-align: left;
       height: 165px;
+      line-height: 165px;
       padding: 0;
       background-image: url("../images/01-2_plan/cover_plan.jpg"); } }
   @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
