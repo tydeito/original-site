@@ -35,9 +35,13 @@ $fotterColor: #101215;
     } // リンクのフォントを全てサブカラーに
     
 @mixin sub_title {
-        font-size: 3.5rem;
+        font-size: 2.3rem;
         font-weight: bold;
         text-align: center;
+        
+        @media (min-width: 768px) {
+            font-size: 3.5rem;
+        }
     } // サブタイトル(小見出しの方)用のmixin
     
 @mixin subtitle_shadow {
@@ -64,6 +68,23 @@ $fotterColor: #101215;
             height: 54px;
             line-height: 54px;
             font-size: 20px;
+    }
+}
+
+@mixin sub_page_cover_area {
+    height: 72px;
+    line-height: 72px;
+    text-align: center;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-width:768px) {
+        
+        text-align: left;
+        height: 165px;
+        line-height: 165px;
+        padding: 0;
     }
 }
     
@@ -173,6 +194,7 @@ h4{
 
 .subColor_container {
     background: $subColor;
+    color: white;
 }
 
 .sp_menu_subColor{
@@ -530,24 +552,13 @@ footer {
 /* sub_page_cover_area
 ----------------------------------------------------------------*/
 
-#sub_page_cover_area {
-    height: 72px;
-    line-height: 72px;
-    text-align: center;
-    padding: 0;
-
+.plan_cover_area {
+    @include sub_page_cover_area;
     background-image: url("../images/02-2_plan_sp/cover_plan_sp.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-
     
     //PC表示
     @media (min-width:768px) {
         
-        text-align: left;
-        height: 165px;
-        line-height: 165px;
-        padding: 0;
         background-image: url("../images/01-2_plan/cover_plan.jpg");
         
          //retina_bg
@@ -556,18 +567,18 @@ footer {
             background-image: url("../images/01-2_plan/cover_plan@2x.jpg");
         }
     }
+}
     
-    .sub_page_cover_text{
+.sub_page_cover_text{
+    padding-top: 0;
+    line-height: 72px;
+    
+    @media (min-width:768px) {
         padding-top: 0;
-        line-height: 72px;
-        
-        @media (min-width:768px) {
-            padding-top: 0;
-            line-height: 165px;
-        }
-        
+        line-height: 165px;
     }
-}  // .sub_page_cover_area
+    
+}
 
 
 
@@ -576,70 +587,168 @@ footer {
 
 
 .plan_first_container{
-    padding: 48px 0 48px 0;
+    padding: 33px 0 33px 0;
     margin: auto;
+    
+    @media (min-width:768px) {
+        padding: 48px 0 48px 0;
+        }
 }
 
 .plan_first_text{
-     font-size: 2.5rem;
-     font-weight: bold;
-     width: 354px;
-     margin: auto;
+    font-size: 2.0rem;
+    font-weight: bold;
+    width: 260px;
+    margin: auto;
      
-     .mid_text{
-         font-size: 2.0rem;
+    @media (min-width:768px) {
+            padding-top: 0;
+            font-size: 2.5rem;
+            width: 354px;
+            margin: auto;
+        }
+     
+    .mid_text{
+         font-size: 1.6rem;
+         
+         @media (min-width:768px) {
+            font-size: 2.0rem;
+        }
+        
      }
      
      .little_text{
-         font-size: 1.6rem;
+         font-size: 1.4rem;
+         
+         @media (min-width:768px) {
+            font-size: 1.6rem;
+        }
      }
 }
 
 
-/* plan_second_container
+/* picture_container
 ----------------------------------------------------------------*/
 
-.plan_second_container{
-    padding: 46px 0 70px 0;
-    color: white;
+.picture_container{
+    padding: 34px 0 44px 0;
     
-    .plan_second_sub_title{
-        @include sub_title;
+    @media (min-width: 768px) {
+        padding: 46px 0 70px 0;
+    }            
+}
+    
+.picture_sub_title{
+    @include sub_title;
+    padding-bottom: 28px;
+    
+    @media (min-width: 768px) {
         padding-bottom: 68px;
+    }  
+}
+
+
+.reverce_picture_fbox{
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    
+    @media (min-width: 768px) {
+        flex-direction: row;
     }
-
-
-    .plan_second_fbox{
-        justify-content: space-between;
+    
+    .picture_fbox_text{
+        padding-top: 38px;
+        width: 100%;
+        line-height: 2rem;
         
-        .plan_second_text{
+        @media (min-width: 768px) {
             width: 47.3%;
-            line-height: 2rem;
+            padding-top: 0;
+        }
+    }
+    
+    
+    .picture_fbox_img{
+        
+        text-align: center;
+        // margin: auto;
+        
+        @media (min-width: 768px) {
+            width: 47.3%;
+            margin: 0;
         }
         
+        .picture_fbox_img_pc{
+            max-width: 100%;
+            
+            @media (max-width: 767px) {
+                display: none;
+            }      
+        }
         
-        .plan_content_img{
+        .picture_fbox_img_sp{
+            max-width: 500px;
+            width: 100%;
             
+            
+            @media (min-width: 768px) {
+                display: none;
+            }                  
+        }
+    } // .plan_content_img
+} // .plan_second_fbox
+
+
+.normal_picture_fbox{
+    justify-content: space-between;
+    flex-direction: column;
+    
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+    
+    .picture_fbox_text{
+        padding-top: 38px;
+        width: 100%;
+        line-height: 2rem;
+        
+        @media (min-width: 768px) {
             width: 47.3%;
+            padding-top: 0;
+        }
+    }
+    
+    
+    .picture_fbox_img{
+        
+        text-align: center;
+        // margin: auto;
+        
+        @media (min-width: 768px) {
+            width: 47.3%;
+            margin: 0;
+        }
+        
+        .picture_fbox_img_pc{
+            max-width: 100%;
             
-            .plan_content_img_pc{
-                max-width: 100%;
-                
-                @media (max-width: 767px) {
-                    display: none;
-                }      
-            }
+            @media (max-width: 767px) {
+                display: none;
+            }      
+        }
+        
+        .picture_fbox_img_sp{
+            max-width: 500px;
+            width: 100%;
             
-            .plan_content_img_sp{
-                max-width: 100%;
-                
-                @media (min-width: 768px) {
-                    display: none;
-                }                  
-            }
-        } // .plan_content_img
-    } // .plan_second_fbox
-} // .plan_second_container
+            
+            @media (min-width: 768px) {
+                display: none;
+            }                  
+        }
+    } // .plan_content_img
+} // .plan_second_fbox
+
 
 
 
@@ -652,21 +761,50 @@ footer {
     .plan_third_sub_title{
         @include sub_title;
         color: $subColor;
-        padding: 46px 0 70px 0;
+        padding: 53px 0 46px 0;
+        
+        @media (min-width: 768px) {
+            padding: 46px 0 70px 0;
+        }
     }
     
     .plan_icon_set{
-        width: 100%;
+        width: 330px;
+        margin: auto;
+        flex-direction: column;
+        
+        @media (min-width: 768px) {
+            flex-direction: row;
+            width: 100%;
+        }
         
         .plan_icon_box{
             align-items: center;
-            box-sizing: border-box;
-            width: 50%;
-            padding-left: 10%;
-            padding-bottom: 62px;
+            width: 100%;
+            padding-bottom: 42px;
+            
+            @media (min-width: 768px) {
+                box-sizing: border-box;
+                width: 50%;
+                padding-left: 10%;
+                padding-bottom: 62px;
+            }
             
             .plan_icon{
                 @include icon;
+                
+                .plan_icon_img_pc{
+                    @media (max-width: 767px) {
+                        display: none;
+                    }  
+                }
+                
+                .plan_icon_img_sp{
+                    
+                    @media (min-width: 768px) {
+                        display: none;
+                    }   
+                }
             }
             
             .plan_icon_text{
@@ -678,4 +816,34 @@ footer {
 
 
 
+/* service.html
+----------------------------------------------------------------*/
 
+
+/* service_cover_area
+----------------------------------------------------------------*/
+
+
+.service_cover_area {
+    @include sub_page_cover_area;
+    background-image: url("../images/02-3_service_sp/cover_service_sp.jpg");
+    
+    //PC表示
+    @media (min-width:768px) {
+        
+        background-image: url("../images/01-3_service/cover_service.jpg");
+        
+         //retina_bg
+        @media screen and (-webkit-min-device-pixel-ratio:2),
+                          (min-resolution: 2dppx){
+            background-image: url("../images/01-3_service/cover_service@2x.jpg");
+        }
+    }
+}
+
+
+.baseColor_container{
+    .picture_sub_title{
+        color: $subColor;
+    }
+}
