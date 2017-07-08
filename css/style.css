@@ -712,7 +712,7 @@ footer {
   padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/02-5_Q&A_sp/cover_Q&A_sp.jpg"); }
+  background-image: url("../images/02-5_Q_A_sp/cover_Q&A_sp.jpg"); }
   @media (min-width: 768px) {
     .Q_A_cover_area {
       text-align: left;
@@ -721,10 +721,10 @@ footer {
       padding: 0; } }
   @media (min-width: 768px) {
     .Q_A_cover_area {
-      background-image: url("../images/01-5_Q&A/cover_Q&A.jpg"); } }
+      background-image: url("../images/01-5_Q_A/cover_Q&A.jpg"); } }
   @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
     .Q_A_cover_area {
-      background-image: url("../images/01-5_Q&A/cover_Q&A@2x.jpg"); } }
+      background-image: url("../images/01-5_Q_A/cover_Q&A@2x.jpg"); } }
 
 .baseColor_container .picture_sub_title {
   color: #239ac9; }

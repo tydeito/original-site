@@ -1042,17 +1042,17 @@ footer {
 
 .Q_A_cover_area {
     @include sub_page_cover_area;
-    background-image: url("../images/02-5_Q&A_sp/cover_Q&A_sp.jpg");
+    background-image: url("../images/02-5_Q_A_sp/cover_Q&A_sp.jpg");
     
     //PC表示
     @media (min-width:768px) {
         
-        background-image: url("../images/01-5_Q&A/cover_Q&A.jpg");
+        background-image: url("../images/01-5_Q_A/cover_Q&A.jpg");
         
          //retina_bg
         @media screen and (-webkit-min-device-pixel-ratio:2),
                           (min-resolution: 2dppx){
-            background-image: url("../images/01-5_Q&A/cover_Q&A@2x.jpg");
+            background-image: url("../images/01-5_Q_A/cover_Q&A@2x.jpg");
         }
     }
 }
